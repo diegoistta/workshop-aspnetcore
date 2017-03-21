@@ -18,9 +18,9 @@ database:
 
 test:
   pre:
-    - dotnet build teste/UnitTeste/project.json
+    - dotnet build teste/UnitTest/project.json
   override:
-    - dotnet test teste/UnitTeste/project.json
+    - dotnet test teste/UnitTest/project.json
   post: 
     - dotnet publish --configuration Release src/WebAPIApplication/project.json
     - cp -R src/WebAPIApplication/bin/Release/netcoreapp1.1/ $CIRCLE_ARTIFACTS/
