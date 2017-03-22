@@ -33,5 +33,5 @@ test:
       commands:
         - docker build -t workshop-aspnetcore-circleci-azure .
         - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASSWORD
-        - docker tag workshop-aspnetcore-circleci-azure &DOCKER_USER/workshop-aspnetcore-circleci-azure:lates
+        - docker tag workshop-aspnetcore-circleci-azure $DOCKER_USER/workshop-aspnetcore-circleci-azure:latest
         - docker push $DOCKER_USER/workshop-aspnetcore-circleci-azure
